@@ -1,0 +1,2 @@
+# KatagenaGamificationBundle
+Symfony gamification bundle
