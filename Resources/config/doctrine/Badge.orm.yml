@@ -1,0 +1,26 @@
+# src/Katagena/GamificationBundle/Resources/config/doctrine/Badge.orm.yml
+Katagena\GamificationBundle\Entity\Badge:
+    type: entity
+    table: badges
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            type: string
+            length: 100
+        target:
+            type: integer
+        created_at:
+            type: date
+        updated_at:
+            type: datetime
+    manyToOne:
+        parent:
+            targetEntity: Badge
+            inversedBy: badges
+    oneToMany:
+        badges:
+            targetEntity: Badge
+            mappedBy: parent

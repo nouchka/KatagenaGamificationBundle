@@ -1,0 +1,17 @@
+# src/Katagena/GamificationBundle/Resources/config/doctrine/Event.orm.yml
+Katagena\GamificationBundle\Entity\Event:
+    type: entity
+    repositoryClass: Katagena\GamificationBundle\Entity\EventRepository
+    table: events
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        done:
+            type: integer
+        created_at:
+            type: datetime
+    manyToOne:
+        badge:
+            targetEntity: Badge

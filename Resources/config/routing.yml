@@ -1,0 +1,11 @@
+katagena_gamification_api_add:
+    path: /add
+    defaults: { _controller: KatagenaGamificationBundle:Api:add }
+
+katagena_gamification_api_get:
+    path: /get
+    defaults: { _controller: KatagenaGamificationBundle:Api:get }
+    
+katagena_gamification_api_progress:
+    path: /progress
+    defaults: { _controller: KatagenaGamificationBundle:Api:progress }
